@@ -1,9 +1,7 @@
 body {
-  /* Use the provided bg.jpg asset */
-  background: url("bg.jpg") center center / cover no-repeat fixed;
+  background: url("bg.png") center center / cover no-repeat fixed;
   image-rendering: pixelated;
   font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  min-height: 100vh;
 }
 .overlay {
   background: rgba(0, 0, 0, 0.45);
