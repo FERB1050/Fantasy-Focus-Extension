@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Fantasy Focus Mode",
-  "version": "1.0",
-  "description": "Turn your study time into a magical quest by blocking distracting sites with a fantasy world.",
+  "version": "1.2",
+  "description": "Turn your study time into a magical quest by blocking distracting sites with a pixel-art dragon guardian.",
   "permissions": ["tabs", "storage"],
   "host_permissions": ["*://*/*"],
   "action": {

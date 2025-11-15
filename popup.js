@@ -15,8 +15,9 @@ const DEFAULT_BLOCKED = [
 
 let blockedSites = [];
 
+// Load settings
 chrome.storage.sync.get(["focusMode", "blockedSites"], (data) => {
-  const isOn = data.focusMode !== false;
+  const isOn = data.focusMode !== false; // default true
   toggle.checked = isOn;
   statusText.textContent = isOn
     ? "The dragons guard your focus."
@@ -49,6 +50,7 @@ function renderBlockedList() {
   });
 }
 
+// Toggle focus mode
 toggle.addEventListener("change", () => {
   const isOn = toggle.checked;
   chrome.storage.sync.set({ focusMode: isOn });
@@ -57,6 +59,7 @@ toggle.addEventListener("change", () => {
     : "The dragons are sleeping.";
 });
 
+// Add site
 addSiteBtn.addEventListener("click", () => {
   const raw = newSiteInput.value.trim();
   if (!raw) return;
@@ -66,7 +69,9 @@ addSiteBtn.addEventListener("click", () => {
     try {
       const u = new URL(hostname);
       hostname = u.hostname;
-    } catch (e) {}
+    } catch (e) {
+      // ignore invalid
+    }
   }
 
   if (!blockedSites.includes(hostname)) {
@@ -80,6 +85,7 @@ addSiteBtn.addEventListener("click", () => {
   }
 });
 
+// Remove site
 function removeSite(index) {
   blockedSites.splice(index, 1);
   chrome.storage.sync.set({ blockedSites }, () => {

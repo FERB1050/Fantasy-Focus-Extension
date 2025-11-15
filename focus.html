@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Fantasy Focus Realm</title>
     <link rel="stylesheet" href="focus.css">
   </head>
   <body>
-    <div class="container">
-      <h1>🧙‍♂️ The Gate of Distractions is Sealed 🧙‍♂️</h1>
-      <p>
-        The dragons guard your focus. Your current quest is to study, not to wander these lands of distraction.
-      </p>
-      <button id="overrideBtn">Defy the Dragons... (override)</button>
+    <div class="overlay">
+      <div class="scene">
+        <div class="dragon-wrap">
+          <img src="dragon.png" class="dragon" alt="Pixel dragon guardian">
+        </div>
+        <div class="message-box">
+          <h1>🧙‍♂️ The Gate of Distractions is Sealed</h1>
+          <p>
+            The pixel dragon guards your focus. Your current quest is to study,
+            not to wander these lands of distraction.
+          </p>
+          <p class="hint">
+            You may <strong>break the spell once</strong> if this site is truly part of your quest.
+          </p>
+          <button id="overrideBtn">Break the spell (just this once)</button>
+        </div>
+      </div>
     </div>
 
-    <script>
-      document.getElementById("overrideBtn").addEventListener("click", () => {
-        history.back();
-      });
-    </script>
+    <script src="focus.js"></script>
   </body>
 </html>
