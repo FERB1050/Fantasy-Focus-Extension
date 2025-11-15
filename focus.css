@@ -6,11 +6,10 @@ body {
 
 .overlay {
   background: rgba(0, 0, 0, 0.45);
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .scene {
@@ -23,7 +22,18 @@ body {
   border: 2px solid #f8f0e3;
   max-width: 800px;
   width: 90%;
-  flex-direction: column;
 }
 
-/* ...rest unchanged... */
+.message-box {
+  color: #f8f0e3;
+  max-width: 420px;
+}
+
+.message-box h1 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+.message-box p {
+  font-size: 12px;
+  line-height: 1.4;
+}
