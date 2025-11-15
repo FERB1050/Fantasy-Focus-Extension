@@ -1,48 +1,24 @@
-body {
-  background: url("bg.png") center center / cover no-repeat fixed;
-  image-rendering: pixelated;
-  font-family: 'Press Start 2P', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  min-height: 100vh;
-}
-.overlay {
-  background: rgba(0, 0, 0, 0.45);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.scene {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(10, 10, 20, 0.8);
-  border: 2px solid #f8f0e3;
-  max-width: 800px;
-  width: 90%;
-  flex-direction: column;
-}
-.dragon-wrap {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dragon {
-  width: 120px;
-  height: auto;
-  image-rendering: pixelated;
-  animation: dragon-float 3s ease-in-out infinite;
-}
-@keyframes dragon-float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-.message-box {
-  color: #f8f0e3;
-  max-width: 300px;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Fantasy Focus Realm</title>
+  <link rel="stylesheet" href="focus.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="scene">
+      <div class="dragon-wrap">
+        <img src="dragon.png" class="dragon" alt="Pixel dragon guardian">
+      </div>
+      <div class="message-box">
+        <h1>🧙 THE GATE OF DISTRACTIONS IS SEALED 🧙</h1>
+        <p>The pixel dragon guards your focus. Your current quest is to study, not to wander these lands of distraction.</p>
+        <p class="hint">You may <strong>defy the dragons</strong> just this once... if this site is truly part of your quest.</p>
+        <button id="overrideBtn" style="font-weight: bold;">Defy the Dragons... (OVERRIDE)</button>
+      </div>
+    </div>
+  </div>
+  <script src="focus.js"></script>
+</body>
+</html>
