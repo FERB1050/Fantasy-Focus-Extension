@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fantasy Focus</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 10px;
+        width: 260px;
+      }
+      h3 {
+        margin-top: 0;
+      }
+      #statusText {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+      }
+      .section-title {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      #blockedList {
+        list-style: none;
+        padding-left: 0;
+        max-height: 120px;
+        overflow-y: auto;
+        font-size: 0.85em;
+      }
+      #blockedList li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+      }
+      #blockedList button {
+        border: none;
+        cursor: pointer;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      #newSiteInput {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+      }
+      #addSiteBtn {
+        margin-top: 4px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Fantasy Focus Mode</h3>
+    <label>
+      <input type="checkbox" id="focusToggle" />
+      Focus Mode ON
+    </label>
+    <p id="statusText"></p>
+
+    <div class="section-title">Blocked Sites</div>
+    <ul id="blockedList"></ul>
+
+    <input
+      type="text"
+      id="newSiteInput"
+      placeholder="Add site (e.g. instagram.com)"
+    />
+    <button id="addSiteBtn">Add Site to Blocklist</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

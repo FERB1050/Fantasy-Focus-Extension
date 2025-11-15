@@ -1,0 +1,24 @@
+body {
+  background: radial-gradient(circle, #1b1b2f, #0b0b16);
+  color: #f8f0e3;
+  font-family: "Georgia", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  text-align: center;
+  max-width: 500px;
+  border: 2px solid #f8f0e3;
+  padding: 20px;
+  border-radius: 10px;
+}
+button {
+  margin-top: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
