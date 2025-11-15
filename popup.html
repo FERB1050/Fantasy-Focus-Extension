@@ -1,16 +1,23 @@
+<!DOCTYPE html>
+<html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Fantasy Focus</title>
   <link rel="stylesheet" href="focus.css">
   <style>
     html, body {
       width: 320px;
-      min-height: 380px;
+      min-height: 400px;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     body {
       background: url('bg.jpg') center center / cover no-repeat fixed !important;
       image-rendering: pixelated;
       font-family: "Press Start 2P", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      position: relative;
+      z-index: 1;
     }
     .overlay {
       background: rgba(0, 0, 0, 0.35);
@@ -22,12 +29,12 @@
       pointer-events: none;
     }
     .scene {
-      padding: 20px 10px 10px 10px;
+      padding: 18px 10px 10px 10px;
       background: rgba(10, 10, 20, 0.7);
       border-radius: 12px;
       border: 2px solid #f8f0e3;
       max-width: 280px;
-      margin: 40px auto 8px auto;
+      margin: 36px auto 12px auto;
       box-sizing: border-box;
     }
     .message-box {
@@ -35,5 +42,50 @@
       text-align: center;
       margin-bottom: 16px;
     }
+    .section-title, #blockedList, #newSiteInput, #addSiteBtn {
+      width: 90%;
+      margin: 0 auto 12px auto;
+      display: block;
+    }
+    ul#blockedList {
+      list-style: none;
+      padding-left: 0;
+      max-height: 120px;
+      overflow-y: auto;
+      background: rgba(10, 10, 20, 0.3);
+      border-radius: 6px;
+      margin-bottom: 14px;
+      color: #f8f0e3;
+    }
+    ul#blockedList li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      padding: 2px 8px;
+      color: #f8f0e3;
+    }
+    label, input[type="checkbox"] {
+      cursor: pointer;
+      color: #f8f0e3;
+    }
   </style>
 </head>
+<body>
+  <div class="overlay"></div>
+  <div class="scene">
+    <div class="message-box">
+      <h1>Fantasy Focus Mode</h1>
+      <p id="statusText"></p>
+    </div>
+    <label>
+      <input type="checkbox" id="focusToggle"> Focus Mode ON
+    </label>
+  </div>
+  <div class="section-title">Blocked Sites</div>
+  <ul id="blockedList"></ul>
+  <input type="text" id="newSiteInput" placeholder="Add site. Use Format www.site.com">
+  <button id="addSiteBtn">Add Site to Blocklist</button>
+  <script src="popup.js"></script>
+</body>
+</html>
