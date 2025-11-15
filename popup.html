@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Fantasy Focus</title>
   <link rel="stylesheet" href="focus.css">
   <style>
+    /* Only override dimensions for popup */
     html, body {
       width: 320px;
       min-height: 400px;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      overflow: hidden;
     }
     body {
       background: url('bg.jpg') center center / cover no-repeat fixed !important;
@@ -42,33 +43,7 @@
       text-align: center;
       margin-bottom: 16px;
     }
-    .section-title, #blockedList, #newSiteInput, #addSiteBtn {
-      width: 90%;
-      margin: 0 auto 12px auto;
-      display: block;
-    }
-    ul#blockedList {
-      list-style: none;
-      padding-left: 0;
-      max-height: 120px;
-      overflow-y: auto;
-      background: rgba(10, 10, 20, 0.3);
-      border-radius: 6px;
-      margin-bottom: 14px;
-      color: #f8f0e3;
-    }
-    ul#blockedList li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 4px;
-      padding: 2px 8px;
-      color: #f8f0e3;
-    }
-    label, input[type="checkbox"] {
-      cursor: pointer;
-      color: #f8f0e3;
-    }
+    /* Additional popup-only overrides as needed... */
   </style>
 </head>
 <body>
