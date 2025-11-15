@@ -1,1 +1,10 @@
+body {
+  background: url("actionbg.jpg") center center / cover no-repeat fixed;
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* Copy any popup-specific styling you need from your previous focus.css or customize for popup only */
+
 
