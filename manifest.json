@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Fantasy Focus Mode",
+  "version": "1.2",
+  "description": "Turn your study time into a magical quest by blocking distracting sites with a pixel-art dragon guardian.",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fantasy Focus Mode"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

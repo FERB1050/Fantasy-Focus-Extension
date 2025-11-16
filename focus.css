@@ -1,0 +1,112 @@
+body {
+  background: url("bg.png") center center / cover no-repeat fixed;
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.45);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scene {
+  border-radius: 12px;
+  background: rgba(10, 10, 20, 0.8);
+  border: 2px solid #f8f0e3;
+  max-width: 800px;
+  width: 90%;
+  padding: 24px 40px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.scene-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.seal-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffe46b 30%, #fff 90%);
+  color: #4d2e17;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px #fff2, 0 0px 12px #ffe46b88;
+  vertical-align: middle;
+}
+
+.dragon-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.dragon {
+  width: 100px;
+  height: auto;
+  image-rendering: pixelated;
+  animation: dragon-float 3s ease-in-out infinite;
+}
+
+.dragon-left {
+  transform: scaleX(-1);
+  margin-right: 12px;
+}
+
+.dragon-right {
+  margin-left: 12px;
+}
+
+/* Main message and button */
+.message-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.focus-message {
+  color: #f8f0e3;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.hint {
+  color: #ffe46b;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.override-btn {
+  padding: 10px 26px;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, #ffb457, #ffe46b 80%);
+  border: 2px solid #c47c1b;
+  border-radius: 8px;
+  font-family: inherit;
+  color: #4d2e17;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #ffe46b55;
+  cursor: pointer;
+  text-shadow: 0 1px 1px #fff7;
+}
+
+@keyframes dragon-float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
