@@ -28,7 +28,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Title at top */
 .scene-header {
   width: 100%;
   text-align: center;
@@ -36,7 +35,7 @@ body {
 }
 
 .seal-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   letter-spacing: 1px;
   background: linear-gradient(90deg, #ffe46b 30%, #fff 90%);
@@ -44,12 +43,13 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 2px 4px #fff2, 0 0px 12px #ffe46b88;
+  vertical-align: middle;
 }
 
 .wizard-emoji {
-  font-size: 2rem;
-  margin: 0 8px;
+  font-size: 2.2rem;
   vertical-align: middle;
+  margin: 0 10px;
 }
 
 .dragon-row {
