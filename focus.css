@@ -46,12 +46,6 @@ body {
   vertical-align: middle;
 }
 
-.wizard-emoji {
-  font-size: 2.2rem;
-  vertical-align: middle;
-  margin: 0 10px;
-}
-
 .dragon-row {
   display: flex;
   align-items: center;
@@ -59,7 +53,6 @@ body {
   gap: 24px;
 }
 
-/* Dragons left/right */
 .dragon {
   width: 100px;
   height: auto;
